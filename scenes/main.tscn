@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqfl20tu50gob"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_fy63j"]
+[ext_resource type="PackedScene" uid="uid://duwxin3d5esvh" path="res://scenes/particles.tscn" id="2_udcde"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_fy63j")
+COLORS = PackedVector3Array(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1)
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("2_udcde")]
