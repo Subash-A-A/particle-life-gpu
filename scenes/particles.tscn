@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://duwxin3d5esvh"]
 
 [ext_resource type="Shader" path="res://shaders/particles.gdshader" id="1_mcvea"]
-[ext_resource type="Texture2D" uid="uid://cgyiw1ucpha0h" path="res://shaders/particle.png" id="2_qhsxf"]
+[ext_resource type="Texture2D" uid="uid://cgyiw1ucpha0h" path="res://shaders/particle.png" id="2_jhjfa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t5m37"]
 shader = ExtResource("1_mcvea")
@@ -10,4 +10,4 @@ shader_parameter/colors = PackedVector3Array()
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
 process_material = SubResource("ShaderMaterial_t5m37")
-texture = ExtResource("2_qhsxf")
+texture = ExtResource("2_jhjfa")
