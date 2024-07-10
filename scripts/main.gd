@@ -4,7 +4,7 @@ extends Node2D
 @export_range(1, 16) var NUM_COLORS := 3
 @export_range(0.5, 5) var PARTICLE_SCALE := 0.5
 @export_range(1, 1000) var UNIT_DISTANCE := 100.0
-@export_range(0.0, 1.0, 0.01) var FRICTION := 0.05
+@export_range(0.0, 1.0, 0.01) var FRICTION := .75
 @export_range(0.0, 1000) var MAX_VELOCITY := 1000.0;
 @export_range(1, 10) var TIME_SCALE := 0.05
 @export_range(0, 1000) var FORCE_SCALE := 50.0
@@ -63,7 +63,7 @@ func _process(delta):
 		get_tree().quit(0)
 		
 	if Input.is_action_just_pressed("randomize_matrices"):
-		_setup_random_matrices()
+		pass
 		
 	TIME_SCALE = original_time_scale * 2.0 if Input.is_action_pressed("speed_up") else original_time_scale
 	
@@ -98,7 +98,7 @@ func _setup_random_matrices():
 		var dist_row = []
 		for j in range(NUM_COLORS):
 			force_row.append(randf_range(-1, 1))
-			dist_row.append(randf_range(0.25, 1))
+			dist_row.append(randf_range(0, 1))
 		interaction_forces.append(force_row)
 		interaction_distances.append(dist_row)
 
