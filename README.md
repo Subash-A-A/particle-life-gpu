@@ -1,5 +1,5 @@
 # Particle Life GPU Simulator
-This is the GPU Implementation of https://github.com/Subash-A-A/life-simulator  
+This is the GPU Implementation of https://github.com/Subash-A-A/life-simulator using Compute Shaders
 Simulate up to 100K particles (CPU implementation supports up to 1K particles)
 
 ![Screenshot from 2024-07-02 17-48-40](https://github.com/Subash-A-A/particle-life-gpu/assets/83503341/a88aa28a-acac-448b-bd63-a746b547de90)
