@@ -3,22 +3,24 @@
 This project simulates up to 100K particles interacting with each other using a GPU backend through compute shaders. The simulation leverages spatial binning to handle particle interactions efficiently, ensuring high performance even with a large number of particles.
 
 ### Simulation Parameters  
-NUM_PARTICLES: Specifies the number of particles in the simulation  
-NUM_COLORS: Defines the number of different particle colors/types in the simulation  
-PARTICLE_SCALE: Sets the scale/size of the particles  
-UNIT_DISTANCE: The unit distance used in particle interaction calculations. Determines the range within which particles influence each other  
-FRICTION: The friction factor applied to particle velocities, affecting how quickly they slow down  
-MAX_VELOCITY: The maximum velocity a particle can attain  
-TIME_SCALE: Scales the simulation time step, affecting the speed of the simulation  
-FORCE_SCALE: Scales the force applied during particle interactions  
-interaction_forces: A 2D array where each element represents the interaction force between different particle colors/types   
-interaction_distances: A 2D array where each element represents the interaction distance between different particle colors/types  
+**NUM_PARTICLES**: Specifies the number of particles in the simulation  
+**NUM_COLORS**: Defines the number of different particle colors/types in the simulation  
+**PARTICLE_SCALE**: Sets the scale/size of the particles  
+**UNIT_DISTANCE**: The unit distance used in particle interaction calculations. Determines the range within which particles influence each other  
+**FRICTION**: The friction factor applied to particle velocities, affecting how quickly they slow down  
+**MAX_VELOCITY**: The maximum velocity a particle can attain  
+**TIME_SCALE**: Scales the simulation time step, affecting the speed of the simulation  
+**FORCE_SCALE**: Scales the force applied during particle interactions  
+**interaction_forces**: A 2D array where each element represents the interaction force between different particle colors/types   
+**interaction_distances**: A 2D array where each element represents the interaction distance between different particle colors/types  
 
 ### Tested on:  
-CPU: AMD Ryzen 5 4600H 3.00 GHz  
-RAM: 8 GB  
-OS: Windows 11, Ubuntu 24.04  
-GPU: Nvidia GTX 1650 Ti 4GB  
+**CPU**: AMD Ryzen 5 4600H 3.00 GHz  
+**RAM**: 8 GB  
+**OS**: Windows 11, Ubuntu 24.04  
+**GPU**: Nvidia GTX 1650 Ti 4GB  
+
+### Screenshots
 
 ![Screenshot from 2024-07-02 17-48-40](https://github.com/Subash-A-A/particle-life-gpu/assets/83503341/a88aa28a-acac-448b-bd63-a746b547de90)
 ![Screenshot from 2024-07-02 18-47-57](https://github.com/Subash-A-A/particle-life-gpu/assets/83503341/876c213b-85c6-4155-a2f2-5b03e1ad5fd0)
