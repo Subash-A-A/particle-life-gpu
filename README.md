@@ -2,6 +2,12 @@
 This is the GPU Implementation of https://github.com/Subash-A-A/life-simulator using Compute Shaders  
 Simulate up to 100K particles (CPU implementation supports up to 1K particles)
 
+Tested on:  
+CPU: AMD Ryzen 5 4600H 3.00 GHz  
+RAM: 8 GB  
+OS: Windows 11, Ubuntu 24.04  
+GPU: Nvidia GTX 1650 Ti 4GB  
+
 ![Screenshot from 2024-07-02 17-48-40](https://github.com/Subash-A-A/particle-life-gpu/assets/83503341/a88aa28a-acac-448b-bd63-a746b547de90)
 ![Screenshot from 2024-07-02 18-47-57](https://github.com/Subash-A-A/particle-life-gpu/assets/83503341/876c213b-85c6-4155-a2f2-5b03e1ad5fd0)
 ![Screenshot from 2024-07-03 12-59-41](https://github.com/Subash-A-A/particle-life-gpu/assets/83503341/fdb51b9d-3a9c-438c-9e91-eaab4e609525)
