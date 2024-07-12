@@ -17,8 +17,13 @@ This project, developed in Godot, simulates up to 100,000 particles interacting 
 ### Tested on:  
 **CPU**: AMD Ryzen 5 4600H 3.00 GHz  
 **RAM**: 8 GB  
-**OS**: Windows 11, Ubuntu 24.04  
 **GPU**: Nvidia GTX 1650 Ti 4GB  
+
+### Simulation FPS (when tested on the above specs):  
+10K particles --> 450 fps  
+25K particles --> 170 fps  
+50K particles --> 60 fps  
+100K particles --> 15 fps  
 
 ### Screenshots
 
