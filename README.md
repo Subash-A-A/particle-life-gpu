@@ -1,7 +1,7 @@
 # Particle Life GPU Simulator
-This is the GPU Implementation of https://github.com/Subash-A-A/life-simulator using Compute Shaders  
-Simulate up to 100K particles (CPU implementation supports up to 1K particles)
-
+ 
+This project simulates up to 100K particles interacting with each other using a GPU backend through compute shaders. The simulation leverages spatial binning to handle particle interactions efficiently, ensuring high performance even with a large number of particles.
+  
 Tested on:  
 CPU: AMD Ryzen 5 4600H 3.00 GHz  
 RAM: 8 GB  
