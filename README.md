@@ -19,7 +19,7 @@ This project, developed in Godot, simulates up to 100,000 particles interacting 
 **RAM**: 8 GB  
 **GPU**: Nvidia GTX 1650 Ti 4GB  
 
-### Simulation FPS (when tested on the above specs):  
+### Simulation FPS (tested with the above specifications):  
 10K particles --> 450 fps  
 25K particles --> 170 fps  
 50K particles --> 60 fps  
