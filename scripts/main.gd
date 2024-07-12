@@ -1,21 +1,21 @@
 extends Node2D
 
-@export_range(0, 100000) var NUM_PARTICLES := 60000 :set = _set_num_particles
-@export_range(1, 16) var NUM_COLORS := 10
-@export_range(0.5, 5) var PARTICLE_SCALE := 0.35
+@export_range(0, 100000) var NUM_PARTICLES := 100000 :set = _set_num_particles
+@export_range(1, 16) var NUM_COLORS := 3
+@export_range(0.5, 5) var PARTICLE_SCALE := 0.3
 @export_range(1, 1000) var UNIT_DISTANCE := 64.0
 @export_range(0.0, 1.0, 0.01) var FRICTION := .25
 @export_range(0.0, 1000) var MAX_VELOCITY := 1000.0;
-@export_range(1, 10) var TIME_SCALE := 0.05
+@export_range(0, 10) var TIME_SCALE := 0.05
 @export_range(0, 1000) var FORCE_SCALE := 500.0
-var COLORS: Array
+@export var interaction_forces: Array[Array] = []
+@export var interaction_distances: Array[Array] = []
+
+var COLORS: Array[Vector3]
 
 var particles_pos: PackedVector2Array = PackedVector2Array()
 var particles_vel: PackedVector2Array = PackedVector2Array()
 var particles_color: PackedFloat32Array = PackedFloat32Array()
-
-@export var interaction_forces: Array[Array] = []
-@export var interaction_distances: Array[Array] = []
 
 var IMAGE_SIZE: int
 var particles_data: Image
@@ -86,12 +86,15 @@ func _ready():
 	_update_particles(0)
 	
 func _process(delta):
+	
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit(0)
 		
 	if Input.is_action_just_pressed("randomize_matrices"):
 		pass
-		
+	
+	get_window().title = "COUNT: " + str(NUM_PARTICLES) + " / FPS: " + str(Engine.get_frames_per_second())
+	
 	TIME_SCALE = original_time_scale * 2.0 if Input.is_action_pressed("speed_up") else original_time_scale
 	
 	rd.sync()
@@ -119,6 +122,8 @@ func _update_data_texture():
 	particles_data_texture.update(particles_data)
 
 func _setup_random_matrices():
+	if(!interaction_forces.is_empty() and !interaction_distances.is_empty()): return
+	
 	interaction_forces = []
 	interaction_distances = []
 	for i in range(NUM_COLORS):
@@ -285,8 +290,8 @@ func _generate_parameter_buffer(delta: float) -> RID:
 	
 	return rd.storage_buffer_create(params_buffer_bytes.size(), params_buffer_bytes)
 
-func generate_colors(n: int) -> Array:
-	var colors = []
+func generate_colors(n: int) -> Array[Vector3]:
+	var colors: Array[Vector3] = []
 	for i in range(n):
 		var hue = float(i) / n
 		var color = hsv_to_rgb(hue, 1.0, 1.0)
