@@ -1,6 +1,6 @@
 # Particle Life GPU Simulator
- 
-This project simulates up to 100K particles interacting with each other using a GPU backend through compute shaders. The simulation leverages spatial binning to handle particle interactions efficiently, ensuring high performance even with a large number of particles.
+
+This project, developed in Godot, simulates up to 100,000 particles interacting with each other using a GPU backend through compute shaders. It employs spatial binning to manage particle interactions efficiently, ensuring high performance even with a substantial number of particles.  
 
 ### Simulation Parameters  
 **NUM_PARTICLES**: Specifies the number of particles in the simulation  
